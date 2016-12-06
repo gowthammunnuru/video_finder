@@ -1,0 +1,16 @@
+/studio/train/streaming/Core/Studio_Intro_aschlussel_2-25-2013_vid2996/
+/studio/train/streaming/Gmail_and_Google_Calendar/Google_Mail-And-Calendar_srboson_3-24-2015_VID-4364/
+/studio/train/streaming/Core/Systems_Overview_mmacready_09-01-2015_vid4554/
+/studio/train/streaming/Core/Unix_1_fbunting_01-15-08/
+/studio/train/streaming/Core/Unix_2_fbunting_07-29-08/
+/studio/train/streaming/Training/Job_Tree_swneistadt_01-19-2016_VID-4779/
+/studio/train/streaming/Core/ANI_hoyt_7-31-08/
+/studio/train/streaming/Animation/PeRCS_rmccann_03-20-2015_vid-4357/
+/studio/train/streaming/Core/ShotBuilding_12-14-09_gyates_VID970/
+/studio/train/streaming/CharTD/Shot_building_and_motion_rendering_gyates_03-13-2014_VID-3735/
+/studio/train/streaming/Core/Job_Tree_Advanced_08-04-09/
+/studio/train/streaming/Core/Studio_Tools_Formats_and_Conventions_gyates_12-18-2015_VID-4737/
+/studio/train/streaming/Core/Movie_Utilities_tingersoll_07-18-08/
+/studio/train/streaming/Core/Nile_rharnois_03-06-08/
+/studio/train/streaming/MYDW_Wiki/Wiki_Basic_fbunting_5-21-2015_vid4417/
+/studio/train/streaming/Jira/Jira_bmorgan_8-2-2013_VID-3296/

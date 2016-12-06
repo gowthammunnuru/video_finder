@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>DreamWorks Education Video Finder</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.0/css/bootstrap-datepicker.min.css"> -->
+        <!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css"> -->
+        <!-- <link rel="stylesheet" href="static/external/bootstrap.min.css" /> -->
+        <link rel="stylesheet" href="static/css/loading-bar.css" />
+        <link rel="stylesheet" href="static/css/app.css" />
+        <link rel="stylesheet" href="static/css/sidebar.css" />
+    </head>
+    <body  ng-app='videoApp'>
+		<div class="navbar navbar-fixed-top">
+			<div class="logo" ui-sref='landingPage'>
+				<a class="navbar-brand">
+					<span class="logoimg"></span>
+				</a>
+			</div>
+			<ul class="nav navbar-nav  pull-right">
+				<li><a class="navbar-item" ui-sref="lVideos" style="font-size:large;">Latest Videos</a></li>
+				<li><a class="navbar-item" ui-sref="dVideos({dept:'Animation',searchval:''})" style="font-size:large;">Categories</a></li>
+			</ul>
+		</div>
+
+		<div ui-view></div>	
+
+        <div class="navbar-fixed-bottom bottom-footer">
+            <hr class="footer-line">
+            <!-- <footer class="footer"> -->
+                <div class="container footer-container">
+                    <p class="muted credit footer-contents">
+                        <a target="_" href="http://mydw.anim.dreamworks.com/display/DOCS/DreamWorks+Education+Video+Finder+-+User+Guide">Documentation</a>
+                        <!-- <a href="http://jira.anim.dreamworks.com/secure/CreateIssueDetails.jspa?pid=11200&amp;issuetype=2&amp;priority=3&amp;security=10051&amp;assignee=nkumar&amp;components=20056&amp;reporter=&amp;description=----+\\+v1.1+-+dd3bf5d+|+8569@tadpole.ddu-india.com+|+http%3A%2F%2Fcritiq%2F%23%2F+\\numbcam.ddu-india.com+|+Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0" target="_" ng-href="http://jira.anim.dreamworks.com/secure/CreateIssueDetails.jspa?pid=11200&amp;issuetype=2&amp;priority=3&amp;security=10051&amp;assignee=nkumar&amp;components=20056&amp;reporter=&amp;description=----+\\+v1.1+-+dd3bf5d+|+8569@tadpole.ddu-india.com+|+http%3A%2F%2Fcritiq%2F%23%2F+\\numbcam.ddu-india.com+|+Mozilla/5.0 (X11; Linux x86_64; rv:38.0) Gecko/20100101 Firefox/38.0">Feature Request</a> | -->
+                        <span class="pull-right metadata-tag" style="color:black;"> v2.0.1 </span>
+                    </p>
+                </div>
+            <!-- </footer> -->
+        </div>	
+		
+    	<!-- // <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script> -->
+        <script src="static/external/jquery-1.10.2.min.js"></script>
+        <!-- // <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> -->
+        <script src="static/external/jquery.min.js"></script>
+        <!-- // <script src="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/js/bootstrap.min.js"> </script> -->
+        <script src="static/external/bootstrap.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.min.js"></script> -->
+        <script src="static/external/angular.min.js"></script>
+        <!-- <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.13.1.js"></script> -->
+        <script src="static/external/ui-bootstrap-tpls-0.13.1.js"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script> -->
+        <script src="static/external/angular-ui-router.min.js"></script>
+        <!-- // <script src="https://rawgithub.com/cletourneau/angular-bootstrap-datepicker/master/dist/angular-bootstrap-datepicker.js" charset="utf-8"></script> -->
+        <script src="static/external/angular-bootstrap-datepicker.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-animate.min.js"></script>
+        <script src="static/external/loading-bar.js"></script>
+        <script src="static/js/app.js"> </script>
+        <script src="static/js/services.js"> </script>
+        <script src="static/js/controller.js"> </script>
+
+    </body>
+</html>
+
+

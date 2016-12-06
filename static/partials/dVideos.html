@@ -1,0 +1,122 @@
+<form name='searchCatForm' ng-submit=getVideos(dept,searchval) class="" role="search">
+    <div class="form-group">
+        <input class='form-control searchbox1' type='text' id="popoverData"  ng-model='searchval' placeholder='Search Video with Title on selected Category...' 
+          name='searchval' size="30" required ng-minlength='1'>           
+        <span class="glyphicon glyphicon-search searchbox-glass1"  ng-disabled='searchCatForm.searchval.$invalid' ng-click="getVideos(dept,searchval)"></span>
+    </div>
+</form>
+<br>
+<br>
+<br>
+<br>
+<div id="sidebar" class="col-md-2">
+  <div class="panel">
+    <div class="panel-body">
+      <ul class="nav nav-pills nav-stacked">
+        <li ng-repeat="(key, value) in departmentData">
+        <a href="" class="dept-group" ng-class={'dept-group-active':isCurrentGroup(key)}>
+          {{key}}
+        </a>
+        <ul class="nav">
+          <li class="dept" id='{{dept}}' ng-class='{"dept-active":isDeptSelected(dept)}' ng-repeat="dept in value" ui-sref='dVideos({dept:dept,searchval:null})'>
+          {{dept}}
+          </li>
+        </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="container"> 
+    <div class="pull-right">
+        <div class="btn-group" ng-show="VideoData.length>0">
+          <a id="card" class="btn btn-default btn-sm" title="Card" ng-click="showcard=true;showgrid=false;showlist=fasle">
+                <span class="glyphicon glyphicon-th-list"></span>
+            </a>
+            <a id="grid" class="btn btn-default btn-sm" title="Grid" ng-click="showgrid=true;showlist=fasle;showcard=false">
+                <span id="bottom" class="glyphicon glyphicon-th"></span>
+            </a>            
+            <a id="list" class="btn btn-default btn-sm" title="List" ng-click="showgrid=false;showlist=true;showcard=false">
+                <span class="glyphicon glyphicon-align-justify"></span>
+            </a> 
+        </div>
+    </div>
+    <div id="TitleGrid" class="row" ng-show="showgrid" style="padding-top: 60px;">
+        <span class="" ng-repeat='videos_result in VideoData'>
+            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+                <a class="thumbnail" href={{videos_result[6]}} target="_blank">
+                    <img class="img-responsive" src={{videos_result[5]}} alt="">
+                </a>
+            </div>                   
+        </span>
+    </div>
+    <div id="TitleCard" class="cardHolder" ng-show="showcard" style="padding-top: 60px;">        
+        <span class="card" ng-repeat='videos_result in VideoData'>            
+            <span class="thumbnail-div thumb">
+                <span class="img-div">
+                    <a href={{videos_result[6]}} target="_blank">
+                        <img src={{videos_result[5]}} alt="Sample Image" style="width:200px;">
+                    </a>
+                </span>
+                <span class="details-div">
+                    <b>{{videos_result[1]}}</b><br>
+                    <b>{{videos_result[3]}}</b><br>
+                    <b>{{videos_result[2]}}</b><br>
+                    <b>{{videos_result[4]}}</b>
+                </span>
+             </span>                       
+        </span>    
+    </div>
+    <div id="TitleList" ng-show="showlist" style="padding-top: 60px;">
+      <table class="table table-hover">
+        <thead ng-show="VideoData.length>0">
+            <tr>
+                <th>
+                    <a href="#" ng-click="order(1)">
+                        Title
+                        <span ng-show="predicate == '1' && reverse" class="fa fa-caret-down"></span>
+                        <span ng-show="predicate == '1' && !reverse" class="fa fa-caret-up"></span>
+                    </a>
+                </th>
+                <th>
+                    <a href="#" ng-click="order(3)">
+                        Length
+                        <span ng-show="predicate == '3' && reverse" class="fa fa-caret-down"></span>
+                        <span ng-show="predicate == '3' && !reverse" class="fa fa-caret-up"></span>
+                    </a>
+                </th>
+                <th>
+                    <a href="#" ng-click="order(2)">
+                        Recorded Date
+                        <span ng-show="predicate == '2' && reverse" class="fa fa-caret-down"></span>
+                        <span ng-show="predicate == '2' && !reverse" class="fa fa-caret-up"></span>
+                    </a>
+                </th>
+                <th>
+                    <a href="#" ng-click="order(4)">
+                        Presenter
+                        <span ng-show="predicate == '4' && reverse" class="fa fa-caret-down"></span>
+                        <span ng-show="predicate == '4' && !reverse" class="fa fa-caret-up"></span>
+                    </a>
+                </th>
+            </tr>
+        </thead>
+        <tbody ng-repeat='videos_result in VideoData'>
+          <tr>          
+            <td><a href={{videos_result[6]}} target="_blank">{{videos_result[1]}}</a></td>          
+            <td>{{videos_result[3]}}</td>
+            <td>{{videos_result[2]}}</td>
+            <td>{{videos_result[4]}}</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div> 
+    <div class="" ng-show="VideoData.length==0">
+        <center><h4 > Skipper, Shouldn't we tell them that search result is "not found" </h4>
+        <div class="lead">
+            <img src="../static/media/404.jpg" class="img-responsive img-thumbnail">
+        <h4> Nah! Just smile and wave, boys. Smile and wave. </h4></center>
+        </div>
+    </div>      
+</div>
